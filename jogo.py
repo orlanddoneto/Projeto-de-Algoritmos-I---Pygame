@@ -88,7 +88,7 @@ todas_as_sprites.add(corredor)
 
 relogio = pygame.time.Clock()
 
-imagem_fundo = pygame.image.load('ruina.gif').convert()
+imagem_fundo = pygame.image.load('imagens/ruina.gif').convert()
 imagem_fundo = pygame.transform.scale(imagem_fundo,(750,600))
 
 termo1 = random.randint(1,20)
@@ -97,21 +97,21 @@ termo2 = random.randint(1,15)
 respostas = [termo1 * termo2, random.randint(10, 200), random.randint(10, 200), random.randint(10, 200)]
 respostas_aleatorias = random.sample(respostas, 4)
 
-moldura = pygame.image.load('moldura2.png')
+moldura = pygame.image.load('imagens/moldura2.png')
 moldura = pygame.transform.scale(moldura, (100,60))
 
-imagem_inicio = pygame.image.load('indiana jones background.png').convert()
+imagem_inicio = pygame.image.load('imagens/indiana jones background.png').convert()
 imagem_inicio = pygame.transform.scale(imagem_inicio,(750,600))
-imagem_vitoria = pygame.image.load('tela vitória.png').convert()
+imagem_vitoria = pygame.image.load('imagens/tela vitória.png').convert()
 imagem_vitoria = pygame.transform.scale(imagem_vitoria,(750,600))
-imagem_derrota = pygame.image.load('jones derrota.png').convert()
+imagem_derrota = pygame.image.load('imagens/jones derrota.png').convert()
 imagem_derrota = pygame.transform.scale(imagem_derrota,(750,600))
 
 errou_e_ganhou = False
 
 menu = True
-musica_acertos = pygame.mixer.Sound('smw_coin.wav')
-musica_menu = pygame.mixer.music.load('musica-do-indiana-jones.mp3')
+musica_acertos = pygame.mixer.Sound('audio/smw_coin.wav')
+musica_menu = pygame.mixer.music.load('audio/musica-do-indiana-jones.mp3')
 pygame.mixer.music.play(-1)
 while menu: #Laço que é acionado no início do programa, como se fosse o menu
     tela.blit(imagem_inicio, (0, 0))
@@ -126,7 +126,7 @@ while menu: #Laço que é acionado no início do programa, como se fosse o menu
     pygame.display.flip()
 pygame.mixer.music.stop()
 pygame.mixer.music.set_volume(0.08)
-musica_fundo = pygame.mixer.music.load('BoxCat Games - CPU Talk.mp3')
+musica_fundo = pygame.mixer.music.load('audio/BoxCat Games - CPU Talk.mp3')
 pygame.mixer.music.play(-1)
 
 
@@ -216,7 +216,7 @@ while True:
     tela.blit(pontos_formatado,(100,80))
     if acertos == 10: #estrutura condicional que vai nortear as ações após ganhar o jogo
         pygame.mixer.music.stop()
-        pygame.mixer.music.load('intro-do-jogo-ao-som-de-raca-negra.mp3')
+        pygame.mixer.music.load('audio/intro-do-jogo-ao-som-de-raca-negra.mp3')
         pygame.mixer.music.play(-1)
 
         errou_e_ganhou = True
@@ -230,7 +230,7 @@ while True:
                     if event.key == K_j:
                         pygame.mixer.music.stop()
                         pygame.mixer.music.set_volume(0.08)
-                        musica_fundo = pygame.mixer.music.load('BoxCat Games - CPU Talk.mp3')
+                        musica_fundo = pygame.mixer.music.load('audio/BoxCat Games - CPU Talk.mp3')
                         pygame.mixer.music.play(-1)
                         reiniciarjogo()
             pygame.display.update()
