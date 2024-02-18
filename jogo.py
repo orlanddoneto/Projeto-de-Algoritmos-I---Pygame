@@ -13,9 +13,9 @@ acertos = 0
 tela = pygame.display.set_mode((750,600))
 pygame.display.set_caption('Indiana Jones: Math Run')
 
-fonte = pygame.font.SysFont('Press Start K',50,True,False)
-fonte2 = pygame.font.SysFont('Press Start K',80,True,False)
-fonte3 = pygame.font.SysFont('Press Start K',30,True,False)
+fonte = pygame.font.SysFont('Century Gothic',50,True,False)
+fonte2 = pygame.font.SysFont('Century Gothic',80,True,False)
+fonte3 = pygame.font.SysFont('Century Gothic',30,True,False)
 
 
 class Corredor(pygame.sprite.Sprite): #classe que norteia o movimento do boneco
